@@ -10,6 +10,7 @@ pkgdesc='DolphinOS calamares configuration files and branding'
 arch=('any')
 license=('GPL3')
 source=("git+$url")
+makedepends=('git')
 
 sha256sums=('SKIP')
 
