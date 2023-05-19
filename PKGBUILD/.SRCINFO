@@ -6,6 +6,7 @@ pkgbase = calamares_config_default
 	url = https://github.com/DolphinLNXOS/DolphinOS-calamares-configs.git
 	arch = any
 	license = GPL3
+	makedepends = git
 	source = git+https://github.com/DolphinLNXOS/DolphinOS-calamares-configs.git
 	sha256sums = SKIP
 
