@@ -5,10 +5,11 @@ pkgver=0.1
 pkgrel=1
 epoch=1
 _repo_name=DolphinOS-calamares-configs
+url="https://github.com/DolphinLNXOS/${_repo_name}.git"
 pkgdesc='DolphinOS calamares configuration files and branding'
 arch=('any')
 license=('GPL3')
-source=("https://github.com/DolphinLNXOS/${_repo_name}.git")
+source=("git+$url")
 
 sha256sums=('SKIP')
 
