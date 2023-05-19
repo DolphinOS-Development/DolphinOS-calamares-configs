@@ -1,0 +1,28 @@
+# Maintainer: JesusXD88
+
+pkgname=calamares_config_default
+pkgver=0.1
+pkgrel=1
+epoch=1
+_repo_name=DolphinOS-calamares-configs
+pkgdesc='DolphinOS calamares configuration files and branding'
+arch=('any')
+url='https://www.endeavouros.com'
+license=('GPL3')
+source=("https://github.com/endeavouros-team/${_repo_name}.git")
+
+_date=$(date +%Y.%m.%d)
+
+prepare() {
+    # set date for calamares_branding
+    sed -i "$srcdir/${_repo_name}/calamares/branding/DolphinOS/branding.desc" \
+    -e "s|^\(    version:[ ]*\).*$|\1$_date|" \
+    -e "s|^\(    shortVersion:[ ]*\).*$|\1$_date|"
+
+    #chmod +x "$srcdir/${_repo_name}-${pkgver}/calamares/scripts/"{cleaner_script.sh,chrooted_cleaner_script.sh,update-mirrorlist,pacstrap_calamares}
+}
+
+package() {
+    install -dm 755 "$pkgdir/etc/calamares"
+    cp -r --no-preserve=ownership "$srcdir/${_repo_name}/calamares" "$pkgdir/etc/"
+}
