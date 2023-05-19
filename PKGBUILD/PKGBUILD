@@ -10,6 +10,8 @@ arch=('any')
 license=('GPL3')
 source=("https://github.com/DolphinLNXOS/${_repo_name}.git")
 
+sha256sums=('SKIP')
+
 _date=$(date +%Y.%m.%d)
 
 prepare() {

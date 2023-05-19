@@ -1,0 +1,11 @@
+pkgbase = calamares_config_default
+	pkgdesc = DolphinOS calamares configuration files and branding
+	pkgver = 0.1
+	pkgrel = 1
+	epoch = 1
+	arch = any
+	license = GPL3
+	source = https://github.com/DolphinLNXOS/DolphinOS-calamares-configs.git
+	sha256sums = SKIP
+
+pkgname = calamares_config_default
