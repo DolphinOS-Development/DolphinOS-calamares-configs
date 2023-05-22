@@ -39,5 +39,6 @@ jobs:
         allowUpdates: "true"
         artifactErrorsFailBuild: "true"
         body: "Arch Linux package generated from project build"
-        tag: "arch-package"
+        commit: "true"
+        #tag: "arch-package"
  
