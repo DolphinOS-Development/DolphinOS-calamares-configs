@@ -23,13 +23,19 @@ jobs:
     - name: Generate sha256sum hashes of packages
       run: |
         sha256sum ${{ steps.makepkg.outputs.pkgfile0 }} > ${{ steps.makepkg.outputs.pkgfile0 }}-sha256
+    # - name: Upload to Release
+    #   uses: softprops/action-gh-release@v1
+    #   with:
+    #     tag_name: arch-package
+    #     name: "Automatic CI Builds"
+    #     body: "Arch Linux package generated from project build"
+    #     files: |
+    #       ${{ steps.makepkg.outputs.pkgfile0 }}
+    #       ${{ steps.makepkg.outputs.pkgfile0 }}-sha256
     - name: Upload to Release
-      uses: softprops/action-gh-release@v1
+      uses: ncipollo/release-action@v1
       with:
-        tag_name: arch-package
-        name: "Automatic CI Builds"
+        artifacts: "${{ steps.makepkg.outputs.pkgfile0 }}, ${{ steps.makepkg.outputs.pkgfile0 }}-sha256"
+        allowUpdates: true
         body: "Arch Linux package generated from project build"
-        files: |
-          ${{ steps.makepkg.outputs.pkgfile0 }}
-          ${{ steps.makepkg.outputs.pkgfile0 }}-sha256
  
