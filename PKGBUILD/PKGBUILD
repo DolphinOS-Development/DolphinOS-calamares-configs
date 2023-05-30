@@ -2,7 +2,7 @@
 
 pkgname=calamares_config_default
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 epoch=1
 _repo_name=DolphinOS-calamares-configs
 url="https://github.com/DolphinLNXOS/${_repo_name}.git"
