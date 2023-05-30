@@ -1,7 +1,7 @@
 pkgbase = calamares_config_default
 	pkgdesc = DolphinOS calamares configuration files and branding
 	pkgver = 0.1
-	pkgrel = 1
+	pkgrel = 2
 	epoch = 1
 	url = https://github.com/DolphinLNXOS/DolphinOS-calamares-configs.git
 	arch = any
