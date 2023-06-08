@@ -123,8 +123,8 @@ navigation: widget
 strings:
     productName:         "${NAME}"
     shortProductName:    DolphinOS
-    version:             2020.2 LTS
-    shortVersion:        2020.2
+    version:             
+    shortVersion:        
     versionedName:       DolphinOS
     shortVersionedName:  DolphinOS
     bootloaderEntryName: DolphinOS
@@ -164,7 +164,7 @@ images:
     productIcon:         "squid.png"
     productLogo:         "squid.png"
     # productWallpaper:    "wallpaper.png"
-    productWelcome:      "languages.png"
+    productWelcome:      "4nWLO_upscayl_4x_realesrgan-x4plus.png"
 
 # Colors for text and background components.
 #
@@ -178,10 +178,10 @@ images:
 # branding component also ships a stylesheet.qss. Then they are
 # the corresponding CSS attributes of #sidebarApp.
 style:
-   SidebarBackground:        "#292F34"
+   SidebarBackground:        "#8957e5"
    SidebarText:              "#FFFFFF"
    SidebarTextCurrent:       "#292F34"
-   SidebarBackgroundCurrent: "#D35400"
+   SidebarBackgroundCurrent: "#efefef"
 
 ### SLIDESHOW
 #

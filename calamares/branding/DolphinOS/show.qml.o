@@ -22,7 +22,7 @@ Presentation
 
     Timer {
         id: advanceTimer
-        interval: 5000
+        interval: 1000
         running: presentation.activatedInCalamares
         repeat: true
         onTriggered: nextSlide()
@@ -30,49 +30,33 @@ Presentation
 
     Slide {
 
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
         Image {
-            id: background1
-            source: "Dolphin-logo.png"
-            width: 400
-            height: 400
+            id: background
+            source: "squid.png"
+            width: 200; height: 200
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }
         Text {
-            anchors.bottom: background1.bottom
-            text: "Using Dolphin Emulator as the main engine"
+            anchors.horizontalCenter: background.horizontalCenter
+            anchors.top: background.bottom
+            text: "This is a customizable QML slideshow.<br/>"+
+                  "Distributions should provide their own slideshow and list it in <br/>"+
+                  "their custom branding.desc file.<br/>"+
+                  "To create a Calamares presentation in QML, import calamares.slideshow,<br/>"+
+                  "define a Presentation element with as many Slide elements as needed."
             wrapMode: Text.WordWrap
             width: presentation.width
             horizontalAlignment: Text.Center
-            font.pixelSize: 16
         }
     }
 
     Slide {
+        centeredText: qsTr("This is a second Slide element.")
+    }
 
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
-        Image {
-            id: background2
-            source: "wii.png"
-            width: 200
-            height: 200
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
-        }
-        Text {
-            anchors.bottom: background2.bottom
-            anchors.verticalCenterOffset: 300
-            text: "Your Wii, now everywhere"
-            wrapMode: Text.WordWrap
-            width: presentation.width
-            horizontalAlignment: Text.Center
-            font.pixelSize: 16
-        }
+    Slide {
+        centeredText: qsTr("This is a third Slide element.")
     }
 
     // When this slideshow is loaded as a V1 slideshow, only
@@ -87,7 +71,7 @@ Presentation
     }
 
     function onLeave() {
-        console.log("QML Component (default slideshow) deactivated")
+        console.log("QML Component (default slideshow) deactivated");
     }
 
 }

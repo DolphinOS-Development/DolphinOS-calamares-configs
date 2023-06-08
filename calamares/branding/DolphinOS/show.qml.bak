@@ -47,7 +47,7 @@ Presentation
             wrapMode: Text.WordWrap
             width: presentation.width
             horizontalAlignment: Text.Center
-            font.pixelSize: 16
+            font.pixelSize: parent.width 16
         }
     }
 
@@ -59,8 +59,8 @@ Presentation
         Image {
             id: background2
             source: "wii.png"
-            width: 200
-            height: 200
+            width: 300
+            height: 300
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }
@@ -71,7 +71,32 @@ Presentation
             wrapMode: Text.WordWrap
             width: presentation.width
             horizontalAlignment: Text.Center
-            font.pixelSize: 16
+            font.pixelSize: parent.width 16
+        }
+    }
+
+
+    Slide {
+
+        anchors.fill: parent
+        anchors.verticalCenterOffset: 0
+
+        Image {
+            id: background3
+            source: "wiimenu.png"
+            width: parent.width
+            height: parent.width
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+        Text {
+            anchors.bottom: background3.bottom
+            anchors.verticalCenterOffset: 200
+            text: "Use your Wii as you always did"
+            wrapMode: Text.WordWrap
+            width: presentation.width
+            horizontalAlignment: Text.Center
+            font.pixelSize: parent.width 16
         }
     }
 
